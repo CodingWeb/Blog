@@ -1,2 +1,24 @@
 /* CSS Document */
+@charset "utf-8";
+/* CSS Document */
+body {
+    background-color: #ebeef2;
+    padding-top: 70px;
+}
+.container{
+    color: #464646;
+    background: #fff;
+    margin-top: 50px;
+    padding: 50px;
+}
+label{
+    color: rgb(76, 114, 152);
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.jumbotron h1{
+    font-size: 40px;
+    margin: 0;
+    color: #953b39;
+}
 
