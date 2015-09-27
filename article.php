@@ -1,6 +1,3 @@
-<?php
-require_once('connexion.php');
-?>
 <!doctype html>
 <html>
 <head>
@@ -9,7 +6,7 @@ require_once('connexion.php');
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document sans titre</title>
 <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -23,21 +20,14 @@ require_once('connexion.php');
 include('theme/menu.php');
 ?>
 <div class="container">
-  <div class="row">
+<div class="row">
       <div class="col-sm-12">
           <ol class="breadcrumb">
-              <li class="active"><a href="index.php">Accueil</a></li>
+              <li>Accueil</li>
+              <li class="active"><a href="article.php">Article</a></li>
           </ol>
-          <div class="jumbotron">
-              <h1 class="text-center">Bienvenue sur mon blog</h1>
-          </div>
-          <div class="well">
-              zere
-          </div>
       </div>
   </div>
 </div>
-<script src="../../js/jquery-1.11.2.min.js" type="text/javascript"></script> 
-<script src="../../js/bootstrap.js" type="text/javascript"></script>
 </body>
 </html>
