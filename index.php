@@ -3,7 +3,7 @@ require_once('connexion.php');
 if (!empty($_POST)) {
     extract($_POST);
     $valid = true;
-
+// Je vérifie que dans le formulaire tout est correct
     if (empty($pseudo)) {
         $valid = false;
         $erreurpseudo = 'Indiquez votre pseudo';
@@ -32,6 +32,7 @@ if (!empty($_POST)) {
         $valid = true;
         $articleEnvoyer = 'Votre article a été posté avec succès';
     }
+    // insertion des données du formulaire dans la basse de données
     if ($valid) {
         $requetes = $bdd->prepare('INSERT INTO articles (pseudo, titre, contenu) VALUES (:pseudo, :titre, :contenu)');
         $requetes->execute(array(
@@ -78,6 +79,7 @@ include('theme/menu.php');
             <div class="jumbotron">
                 <h1 class="text-center">Bienvenue sur mon blog</h1>
             </div>
+            <!-- On affiche les articles qui ont été insérer dans la basse de données -->
             <?php
             $requetes = $bdd->query('SELECT * FROM articles ORDER BY article_id DESC');
             while ($donnees = $requetes->fetch()): ?>
@@ -103,6 +105,7 @@ include('theme/menu.php');
 <script src="../../js/jquery-1.11.2.min.js" type="text/javascript"></script>
 <script src="../../js/bootstrap.js" type="text/javascript"></script>
 <script>
+    /* Affiche la boîte de dialogue avec des réglages pour la fermeture */
     $(function () {
         var alert = $('.alert');
         if (alert.length > 0) {

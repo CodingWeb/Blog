@@ -1,3 +1,4 @@
+<!-- Le formulaire de l'article -->
 <form name="form" class="form-horizontal" action="index.php" method="post" role="form">
     <div class="form-group">
         <div class="col-sm-4">
