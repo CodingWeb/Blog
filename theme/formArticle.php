@@ -16,7 +16,7 @@
     <div class="form-group">
         <div class="col-sm-4">
             <label for="article">Votre article :</label>
-            <textarea name="article" id="article" class="form-control" rows="5"><?php if (isset($article)) echo $article;?></textarea>
+            <textarea placeholder="Rédiger votre article.." name="article" id="article" class="form-control" rows="5"><?php if (isset($article)) echo $article;?></textarea>
             <div class="text-danger"><?php if (isset($erreurarticle)) echo $erreurarticle;?></div>
         </div>
     </div>

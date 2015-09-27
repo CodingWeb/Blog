@@ -14,7 +14,7 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-
+<body id="haut">
 <?php
 include ('theme/menu.php');
 ?>
@@ -24,6 +24,7 @@ include ('theme/menu.php');
         <li class="active">Accueil</li>
         <li class="active"><a href="index.php">Admin</a></li>
     </ol>
+    <div class="panel-footer text-right"><a href="#haut">Haut de page</a></div>
 </div>
 <script src="../../../js/jquery-1.11.2.min.js" type="text/javascript"></script>
 <script src="../../../js/bootstrap.js" type="text/javascript"></script>
