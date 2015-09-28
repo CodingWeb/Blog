@@ -30,7 +30,7 @@ $requete->closeCursor();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $titre;?></title>
+    <title><?php echo $titre; ?></title>
     <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -57,8 +57,10 @@ include('theme/menu.php');
             $requete->execute(array('article_id' => $page));
             while ($donnes = $requete->fetch()): ?>
                 <div class="well">
-                    <a href="#"><h2 class="text-center"><?php echo ucfirst(strip_tags($donnes->titre));?></h2></a>
-                    <p><?php echo nl2br(strip_tags($donnes->contenu));?></p>
+                    <a href="#"><h2 class="text-center"><?php echo ucfirst(strip_tags($donnes->titre)); ?></h2></a>
+
+                    <p><?php echo nl2br(strip_tags($donnes->contenu)); ?></p>
+
                     <p id="datecom" class="text-right text-info"><?php echo ucfirst(strip_tags($donnes->pseudo)); ?> à
                         postée
                         le <?php echo date('j/n/Y à G:i', strtotime($donnes->date)) ?></p>

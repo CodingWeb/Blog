@@ -2,37 +2,44 @@ body {
     background-color: #ebeef2;
     padding-top: 70px;
 }
-.container{
+
+.container {
     color: #464646;
     background: #fff;
     margin-top: 50px;
     padding: 50px;
 }
-label{
+
+label {
     color: rgb(76, 114, 152);
     font-size: 16px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.jumbotron h1{
+
+.jumbotron h1 {
     font-size: 40px;
     margin: 0;
     color: #953b39;
 }
-#commenter, h3{
+
+#commenter, h3 {
     color: rgb(76, 114, 152);
     font-size: 26px;
     font-weight: 700;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-#date{
+
+#date {
     position: relative;
     top: 35px;
 }
-#datecom{
+
+#datecom {
     position: relative;
     top: 18px;
 }
-button a{
+
+button a {
     color: white;
 }
 
