@@ -18,11 +18,21 @@ label{
     margin: 0;
     color: #953b39;
 }
-#poster, h3{
+#commenter, h3{
     color: rgb(76, 114, 152);
     font-size: 26px;
     font-weight: 700;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
+#date{
+    position: relative;
+    top: 35px;
+}
+#datecom{
+    position: relative;
+    top: 18px;
+}
+button a{
+    color: white;
+}
 

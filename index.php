@@ -53,7 +53,7 @@ if (!empty($_POST)) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document sans titre</title>
+    <title>Mon blog</title>
     <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -90,13 +90,16 @@ include('theme/menu.php');
 
                     <p><?php echo nl2br(strip_tags($donnees->contenu)); ?></p>
 
-                    <p class="text-right text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à postée
+                    <p id="date" class="text-right text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à
+                        postée
                         le <?php echo date('j/n/Y à G:i', strtotime($donnees->date)) ?></p>
+                    <a href="#commenter" class="btn btn-primary" role="button">Commenter</a>
+
                 </div>
             <?php endwhile;
             ?>
             <hr>
-            <h3 id="poster">Ajouter un article</h3>
+            <h3 id="commenter">Ajouter un article</h3>
             <?php include('theme/formArticle.php'); ?>
             <div class="panel-footer text-right"><a href="#haut">Haut de page</a></div>
         </div>
