@@ -87,14 +87,11 @@ include('theme/menu.php');
                     <a href="article.php?page=<?php echo $donnees->article_id; ?>">
                         <h2 class="text-center"><?php echo ucfirst(strip_tags($donnees->titre)); ?></h2>
                     </a>
-
                     <p><?php echo nl2br(strip_tags($donnees->contenu)); ?></p>
-
                     <p id="date" class="text-right text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à
                         postée
                         le <?php echo date('j/n/Y à G:i', strtotime($donnees->date)) ?></p>
                     <a href="#commenter" class="btn btn-primary" role="button">Commenter</a>
-
                 </div>
             <?php endwhile;
             ?>
@@ -115,6 +112,12 @@ include('theme/menu.php');
             alert.hide().show().delay(3000).slideUp(2000);
         }
     });
+	$(document).ready(function() {
+     $('a[href=#haut]').click(function(){
+          $('html, body').animate({scrollTop:0}, 'slow');
+          return false;
+     });
+});
 </script>
 </body>
 </html>
