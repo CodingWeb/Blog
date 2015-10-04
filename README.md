@@ -8,7 +8,7 @@ Il suffit de télécharger l'intégralité de l'archive et d'extraire dans le do
 
 Créer une base de données nommées blog, si vous choisissez un autre nom de bases de données n'oubliez pas de le changer dans le fichier connexion.phpAjouter les deux tables ci-dessous.
 
-
+```go
 CREATE TABLE `articles` (
   `article_id` int(11) NOT NULL AUTO_INCREMENT,
   `pseudo` varchar(50) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE `commentaires` (
   KEY `article_id` (`article_id`),
   CONSTRAINT `commentaires_ibfk_1` FOREIGN KEY (`article_id`) REFERENCES `articles` (`article_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8
-
+```
 N'hésitez pas si vous voyez que le code pourrait être amélioré.
 
 À bientôt
