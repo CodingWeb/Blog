@@ -44,6 +44,7 @@ if (!empty($_POST)) {
         $erreurcommentaire = 'Vous devez rédiger votre commentaire.';
     }
     if (!empty($commentaire) && strlen($commentaire)<15) {
+        $valid = false;
         $erreurcommentaire = '15 caractère minimun';
     }
     if ($valid)
@@ -87,7 +88,7 @@ include('theme/menu.php');
         <div class="col-sm-12">
             <ol class="breadcrumb">
                 <li>Accueil</li>
-                <li class="active"><a href="article.php">Article</a></li>
+                <li class="active"><a href="article.php?page=<?php echo $page; ?>">Article</a></li>
             </ol>
             <?php
             $requete = $bdd->prepare('SELECT * FROM articles WHERE article_id = :article_id');
