@@ -46,6 +46,19 @@ if (!empty($_POST)) {
     if (!empty($commentaire) && strlen($commentaire)<15) {
         $erreurcommentaire = '15 caractère minimun';
     }
+    if ($valid)
+    {
+        $requete = $bdd->prepare('INSERT INTO commentaires (pseudo, contenu,article_id) VALUES (:pseudo, :contenu, :article_id)');
+        $requete->execute(array(
+            'pseudo' => $pseudo,
+            'contenu' => $commentaire,
+            'article_id' => $page
+        ));
+        $requete->closeCursor();
+        unset($pseudo);
+        unset($commentaire);
+        header('Location: commentaire.php?page='.$page);
+    }
 }
 ?>
 
