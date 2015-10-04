@@ -22,8 +22,9 @@ include ('theme/menu.php');
 <div class="container">
     <ol class="breadcrumb">
         <li class="active">Accueil</li>
-        <li class="active"><a href="index.php">Admin</a></li>
+        <li class="active"><a href="admin.php">Admin</a></li>
     </ol>
+    <h3>Authentification</h3>
     <div class="panel-footer text-right"><a href="#haut">Haut de page</a></div>
 </div>
 <script src="../../../js/jquery-1.11.2.min.js" type="text/javascript"></script>
