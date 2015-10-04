@@ -37,7 +37,7 @@ if (!empty($_POST)) {
     }
     if (!empty($pseudo) && is_numeric($pseudo)) {
         $valid = false;
-        $erreurpseudo = 'Le champ pseudo ne peut pas comporter que des chiffres !';
+        $erreurpseudo = 'Le champ pseudo ne peut pas comporter des chiffres !';
     }
     if (empty($commentaire)) {
         $valid = false;
