@@ -5,7 +5,7 @@
             <label for="pseudo">Pseudo :</label>
             <input type="text" class="form-control" name="pseudo" id="pseudo" placeholder="Votre pseudo"
                    value="<?php if (isset($pseudo)) echo $pseudo; ?>"/ >
-            <div class="text-danger"><?php if (isset($erreurpseudo)) echo $erreurpseudo; ?></div>
+            <div class="text-danger"><b><?php if (isset($erreurpseudo)) echo $erreurpseudo; ?></b></div>
         </div>
     </div>
     <div class="form-group">
@@ -13,7 +13,7 @@
             <label for="commentaires">Commentaire :</label>
             <textarea id="commentaires" placeholder="Rédiger votre commentaire" name="commentaire" rows="4"
                       class="form-control"></textarea>
-            <div class="text-danger"><?php if (isset($erreurcommentaire)) echo $erreurcommentaire; ?></div>
+            <div class="text-danger"><b><?php if (isset($erreurcommentaire)) echo $erreurcommentaire; ?></b></div>
         </div>
     </div>
     <div class="form-group">

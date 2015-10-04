@@ -6,7 +6,7 @@
             <input value="<?php if (isset($pseudo)) echo $pseudo; ?>" type="text" name="pseudo" id="pseudo"
                    placeholder="Entrer votre pseudo" class="form-control">
 
-            <div class="text-danger"><?php if (isset($erreurpseudo)) echo $erreurpseudo; ?></div>
+            <div class="text-danger"><b><?php if (isset($erreurpseudo)) echo $erreurpseudo; ?></b></div>
         </div>
     </div>
     <div class="form-group">
@@ -15,7 +15,7 @@
             <input value="<?php if (isset($titre)) echo $titre; ?>" type="text" placeholder="Entrer votre titre"
                    name="titre" id="titre" class="form-control">
 
-            <div class="text-danger"><?php if (isset($erreurtitre)) echo $erreurtitre; ?></div>
+            <div class="text-danger"><b><?php if (isset($erreurtitre)) echo $erreurtitre; ?></b></div>
         </div>
     </div>
     <div class="form-group">
@@ -24,7 +24,7 @@
             <textarea placeholder="Rédiger votre article.." name="article" id="article" class="form-control"
                       rows="5"><?php if (isset($article)) echo $article; ?></textarea>
 
-            <div class="text-danger"><?php if (isset($erreurarticle)) echo $erreurarticle; ?></div>
+            <div class="text-danger"><b><?php if (isset($erreurarticle)) echo $erreurarticle; ?></b></div>
         </div>
     </div>
     <div class="form-group">
