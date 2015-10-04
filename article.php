@@ -35,6 +35,10 @@ if (!empty($_POST)) {
         $valid = false;
         $erreurpseudo = '3 caractère minimum';
     }
+    if (!empty($pseudo) && is_numeric($pseudo)) {
+        $valid = false;
+        $erreurpseudo = 'Le champ pseudo ne peut pas comporter que des chiffres !';
+    }
     if (empty($commentaire)) {
         $valid = false;
         $erreurcommentaire = 'Vous devez rédiger votre commentaire.';
@@ -61,7 +65,6 @@ if (!empty($_POST)) {
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body id="haut">
 <?php
 include('theme/menu.php');

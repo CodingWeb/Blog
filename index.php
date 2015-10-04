@@ -12,6 +12,11 @@ if (!empty($_POST)) {
         $valid = false;
         $erreurpseudo = '3 caractère minimum';
     }
+    if (!empty($pseudo) && is_numeric($pseudo))
+    {
+        $valid = false;
+        $erreurpseudo = 'Le champ pseudo ne peut pas comporter que des chiffres !';
+    }
     if (empty($titre)) {
         $valid = false;
         $erreurtitre = 'Indiquez un titre';
