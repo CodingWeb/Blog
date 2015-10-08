@@ -59,8 +59,8 @@ if (!empty($_POST)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon blog</title>
-    <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="style/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="style/css/style.css" rel="stylesheet" type="text/css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -93,7 +93,7 @@ include('theme/menu.php');
                         <h2 class="text-center"><?php echo ucfirst(strip_tags($donnees->titre)); ?></h2>
                     </a>
                     <p><?php echo nl2br(strip_tags($donnees->contenu)); ?></p>
-                    <p id="date" class="text-right text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à
+                    <p class="pull-right clearfix text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à
                         postée
                         le <?php echo date('j/n/Y à G:i', strtotime($donnees->date)) ?></p>
                     <a href="#commenter" class="btn btn-primary" role="button">Commenter</a>
@@ -107,8 +107,8 @@ include('theme/menu.php');
         </div>
     </div>
 </div>
-<script src="../../js/jquery-1.11.2.min.js" type="text/javascript"></script>
-<script src="../../js/bootstrap.js" type="text/javascript"></script>
+<script src="style/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="style/js/bootstrap.js" type="text/javascript"></script>
 <script>
     /* Affiche la boîte de dialogue avec des réglages pour la fermeture */
     $(function () {

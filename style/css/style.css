@@ -28,17 +28,6 @@ label {
     font-weight: 700;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
-#date {
-    position: relative;
-    top: 35px;
-}
-
-#datecom {
-    position: relative;
-    top: 18px;
-}
-
 button a {
     color: white;
 }

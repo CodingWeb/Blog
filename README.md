@@ -1,12 +1,14 @@
 # Blog
-Je suis toujours entrain d'approfondir mes connaissances en Php j'utilise boostrap dans mon projet, je suis en train de réaliser un blog, qui va évoluer avec le temps j'éspére avoir des retours pour des améliorations.
+Je suis toujours entrain d'approfondir mes connaissances en PHP j'utilise boostrap dans mon projet, je suis en train de réaliser un blog, qui va évoluer avec le temps j'éspére avoir des retours pour des améliorations.
 
 J'ai terminé le blog je vais passer du côté administration qui aura comme option de modifier un article, d'en supprimer avec ses commentaires associés bien entendus,
 après ce projet terminé je passerai à la programmation orientée objet, je ferai des exercices par exemple reconstruire l'intégralité de ce bloc en programmation orientée objet,
 je compte après passer à symfony qui est orienté objet et qui à l'architecture MVC, Pour tous les débutants qui voudraient jeter un œil au code pour mieux comprendre son fonctionnement,
 Il suffit de télécharger l'intégralité de l'archive et d'extraire dans le dossier wamp/www
 
-Créer une base de données nommées blog, si vous choisissez un autre nom de bases de données n'oubliez pas de le changer dans le fichier connexion.phpAjouter les deux tables ci-dessous.
+Créer une base de données nommées blog, si vous choisissez un autre nom de bases de données n'oubliez pas de le changer dans le fichier connexion.php
+
+###Ajouter les deux tables ci-dessous.
 
 ```go
 CREATE TABLE `articles` (
