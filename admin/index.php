@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!empty($_SESSION['admin']))
+if (!empty($_SESSION['Webcode']))
 {
     header('Location: admin.php');
 }
@@ -11,7 +11,7 @@ if (!empty($_POST)) {
         $valid = false;
         $erreurlogin = 'Indiquez votre login';
     }
-    if (!empty($_POST['login']) and $_POST['login'] !== 'admin') {
+    if (!empty($_POST['login']) and $_POST['login'] !== 'Webcode') {
         $valid = false;
         $erreurlogin = 'Votre login est incorrecte !';
     }
@@ -36,9 +36,9 @@ if (!empty($_POST)) {
     if ($valid) {
         $_SESSION['flash'] = array(
             'type' => 'success',
-            'message' => 'Vous étes connectè avec succès <strong>' . $_SESSION['admin'] . '</strong>'
+            'message' => 'Vous étes connectè avec succès <strong>' . $_SESSION['Webcode'] . '</strong>'
         );
-        $_SESSION['admin'] = $login;
+        $_SESSION['Webcode'] = $login;
         header('Location: admin.php');
     }
 }

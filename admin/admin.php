@@ -1,6 +1,5 @@
 <?php session_start();
-if (empty($_SESSION['admin']))
-{
+if (empty($_SESSION['Webcode'])) {
     header('Location: index.php');
 }
 ?>
@@ -45,7 +44,7 @@ include('theme/menu.php');
                 <span aria-hidden="true">&times;</span>
             </button>
             <p>
-                <?php echo $message['message']; ?>
+                <?php echo $message['message'] . ' <strong>' . $_SESSION['Webcode'] . '</strong>'; ?>
             </p>
         </div>
         <?php
@@ -55,14 +54,20 @@ include('theme/menu.php');
     require_once "../connexion.php";
     $requete = $bdd->query('SELECT * FROM articles ORDER BY article_id DESC');
     while ($donnees = $requete->fetch()): ?>
-        <div class="well"> <a class="pull-right clearfix" href="editer.php?page=<?php echo $donnees->article_id; ?>">Editer cet article</a>
+        <div class="well">
+            <a class="pull-right clearfix" title="éditer un article" href="editer.php?page=<?php echo $donnees->article_id; ?>">Editer cet
+                article</a>
+            <p><a title="Suprimer l'article" href="suprimer.php?page=<?php echo $donnees->article_id; ?>"><span
+                        class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></p>
             <h3 class="text-center"><?php echo strip_tags($donnees->titre); ?></h3>
 
             <p><?php echo nl2br(strip_tags($donnees->contenu)); ?></p>
+
             <p class="pull-right clearfix text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à
                 postée
                 le <?php echo date('j/n/Y à G:i', strtotime($donnees->date)) ?></p>
-            <p><a href="suprimer.php?page=<?php echo $donnees->article_id; ?>"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></p>
+            <p><a href="add_article.php"><button class="btn btn-info">Ajouter un article</button></a></p>
+
         </div>
 
     <?php endwhile;
@@ -79,9 +84,9 @@ include('theme/menu.php');
             alert.hide().show().delay(3000).slideUp(2000);
         }
     });
-    $(document).ready(function() {
-        $('a[href=#haut]').click(function(){
-            $('html, body').animate({scrollTop:0}, 'slow');
+    $(document).ready(function () {
+        $('a[href=#haut]').click(function () {
+            $('html, body').animate({scrollTop: 0}, 'slow');
             return false;
         });
     });
