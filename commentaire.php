@@ -62,9 +62,9 @@ include('theme/menu.php');
             while ($donnees = $requete->fetch()): ?>
             <div class="well">
                 <p><?php echo nl2br(strip_tags($donnees->contenu)); ?></p>
-                <p id="datecom" class="text-right text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à
+                <p class="pull-right clearfix text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à
                     postée
-                    le <?php echo date('j/n/Y à G:i', strtotime($donnees->date)) ?>
+                    le <?php echo date('j/n/Y à G:i', strtotime($donnees->date)) ?></p><br>
             </div>
             <?php endwhile;
             ?>
