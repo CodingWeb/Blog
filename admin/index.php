@@ -21,8 +21,8 @@ if (!empty($_POST)) {
     }
 
     require_once "../connexion.php";
-
-    $requete = $bdd->prepare('SELECT id FROM admin WHERE login = :login AND pass = :pass');
+// on regarde si les champs sont correcte
+    $requete = $bdd->prepare('SELECT login FROM admin WHERE login = :login AND pass = :pass');
     $requete->execute(array(
         'login' => $login,
         'pass' => sha1($pass)
@@ -33,6 +33,7 @@ if (!empty($_POST)) {
             $erreurid = 'Mauvais identifiants';
         }
     }
+    // Si tout ce pass bien on recoit un message de bienvenue avec le nom de l'utulisateur
     if ($valid) {
         $_SESSION['flash'] = array(
             'type' => 'success',

@@ -61,8 +61,8 @@ if (!empty($_POST)) {
         header('Location: commentaire.php?page='.$page);
     }
 }
-?>
 
+?>
 <!doctype html>
 <html>
 <head>
@@ -91,6 +91,7 @@ include('theme/menu.php');
                 <li class="active"><a href="article.php?page=<?php echo $page; ?>">Article</a></li>
             </ol>
             <?php
+          
             $requete = $bdd->prepare('SELECT * FROM articles WHERE article_id = :article_id');
             $requete->execute(array('article_id' => $page));
             while ($donnes = $requete->fetch()): ?>
@@ -115,6 +116,7 @@ include('theme/menu.php');
                 </div>
             <?php endwhile;
             ?>
+
             <?php include('theme/formCom.php'); ?>
             <div class="panel-footer text-right"><a href="#haut">Haut de page</a></div>
         </div>
