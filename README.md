@@ -8,6 +8,8 @@ Il suffit de télécharger l'intégralité de l'archive et d'extraire dans le do
 
 Créer une base de données nommées blog, si vous choisissez un autre nom de bases de données n'oubliez pas de le changer dans le fichier connexion.php
 
+Test en ligne : http://phpsource.info/Blog/index.php
+
 ###Ajouter les deux tables ci-dessous.
 
 ```go

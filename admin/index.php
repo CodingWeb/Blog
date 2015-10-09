@@ -22,7 +22,7 @@ if (!empty($_POST)) {
 
     require_once "../connexion.php";
 // on regarde si les champs sont correcte
-    $requete = $bdd->prepare('SELECT login FROM admin WHERE login = :login AND pass = :pass');
+    $requete = $bdd->prepare('SELECT id FROM admin WHERE login = :login AND pass = :pass');
     $requete->execute(array(
         'login' => $login,
         'pass' => sha1($pass)
