@@ -12,8 +12,7 @@ if (!empty($_POST)) {
         $valid = false;
         $erreurpseudo = '3 caractère minimum';
     }
-    if (!empty($pseudo) && is_numeric($pseudo))
-    {
+    if (!empty($pseudo) && is_numeric($pseudo)) {
         $valid = false;
         $erreurpseudo = 'Le champ pseudo doit comporter minimum une lettre !';
     }
@@ -92,7 +91,9 @@ include('theme/menu.php');
                     <a href="article.php?page=<?php echo $donnees->article_id; ?>">
                         <h2 class="text-center"><?php echo ucfirst(strip_tags($donnees->titre)); ?></h2>
                     </a>
+
                     <p><?php echo nl2br(strip_tags($donnees->contenu)); ?></p>
+
                     <p class="pull-right clearfix text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à
                         postée
                         le <?php echo date('j/n/Y à G:i', strtotime($donnees->date)) ?></p>
@@ -117,12 +118,12 @@ include('theme/menu.php');
             alert.hide().show().delay(3000).slideUp(2000);
         }
     });
-	$(document).ready(function() {
-     $('a[href=#haut]').click(function(){
-          $('html, body').animate({scrollTop:0}, 'slow');
-          return false;
-     });
-});
+    $(document).ready(function () {
+        $('a[href=#haut]').click(function () {
+            $('html, body').animate({scrollTop: 0}, 'slow');
+            return false;
+        });
+    });
 </script>
 </body>
 </html>

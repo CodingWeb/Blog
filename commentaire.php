@@ -1,19 +1,16 @@
 <?php
 require_once "connexion.php";
-if (empty($_GET))
-{
+if (empty($_GET)) {
     header('Location: index.php');
 }
-if (!empty($_GET))
-{
+if (!empty($_GET)) {
     extract($_GET);
     $page = strip_tags($page);
 }
 
 $requete = $bdd->prepare('SELECT id FROM commentaires WHERE article_id = :article_id');
 $requete->execute(array('article_id' => $page));
-if ($requete->rowCount()==0)
-{
+if ($requete->rowCount() == 0) {
     header('Location: index.php');
 }
 $requete = $bdd->prepare('SELECT titre FROM articles WHERE article_id = :article_id');
@@ -54,19 +51,22 @@ include('theme/menu.php');
             <ol class="breadcrumb">
                 <li>Accueil</li>
                 <li><a href="article.php?page=<?php echo $page; ?>">Article</a></li>
-                  <li class="active"><a href="commentaire.php?page=<?php echo $page; ?>">Commentaire</a></li>
+                <li class="active"><a href="commentaire.php?page=<?php echo $page; ?>">Commentaire</a></li>
             </ol>
-            <h4>Article : <a href="article.php?page=<?php echo $page; ?>"><?php echo $donnees->titre .'</a> Postée par '.$donnees->pseudo; ?></h4>
+            <h4>Article : <a
+                    href="article.php?page=<?php echo $page; ?>"><?php echo $donnees->titre . '</a> Postée par ' . $donnees->pseudo; ?>
+            </h4>
             <?php
             $requete = $bdd->prepare('SELECT * FROM commentaires WHERE article_id = :article_id ORDER BY id DESC');
             $requete->execute(array('article_id' => $page));
             while ($donnees = $requete->fetch()): ?>
-            <div class="well">
-                <p><?php echo nl2br(strip_tags($donnees->contenu)); ?></p>
-                <p class="pull-right clearfix text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à
-                    postée
-                    le <?php echo date('j/n/Y à G:i', strtotime($donnees->date)) ?></p><br>
-            </div>
+                <div class="well">
+                    <p><?php echo nl2br(strip_tags($donnees->contenu)); ?></p>
+
+                    <p class="pull-right clearfix text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à
+                        postée
+                        le <?php echo date('j/n/Y à G:i', strtotime($donnees->date)) ?></p><br>
+                </div>
             <?php endwhile;
             ?>
             <div class="panel-footer text-right"><a href="#haut">Haut de page</a></div>
@@ -84,9 +84,9 @@ include('theme/menu.php');
             alert.hide().show().delay(3000).slideUp(2000);
         }
     });
-    $(document).ready(function() {
-        $('a[href=#haut]').click(function(){
-            $('html, body').animate({scrollTop:0}, 'slow');
+    $(document).ready(function () {
+        $('a[href=#haut]').click(function () {
+            $('html, body').animate({scrollTop: 0}, 'slow');
             return false;
         });
     });

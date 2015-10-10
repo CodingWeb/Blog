@@ -80,6 +80,7 @@ include('theme/menu.php');
                 <label for="pseudo">Pseudo :</label>
                 <input class="form-control" placeholder="Votre pseudo" name="pseudo" id="pseudo" type="text"
                        value="<?php if (isset($pseudo)) echo $pseudo; ?>"/>
+
                 <div class="text-danger"><b><?php if (isset($erreurpseudo)) echo $erreurpseudo; ?></b></div>
             </div>
         </div>
@@ -88,6 +89,7 @@ include('theme/menu.php');
                 <label for="titre">Titre :</label>
                 <input value="<?php if (isset($titre)) echo $titre; ?>" placeholder="Votre tire" class="form-control"
                        name="titre" id="titre" type="text"/>
+
                 <div class="text-danger"><b><?php if (isset($erreurtitre)) echo $erreurtitre; ?></b></div>
             </div>
         </div>
@@ -96,6 +98,7 @@ include('theme/menu.php');
                 <label for="article">Article :</label>
                 <textarea rows="4" class="form-control" id="article" name="article"
                           placeholder="Rédiger un article"><?php if (isset($article)) echo $article; ?></textarea>
+
                 <div class="text-danger"><b><?php if (isset($erreurarticle)) echo $erreurarticle; ?></b></div>
             </div>
         </div>

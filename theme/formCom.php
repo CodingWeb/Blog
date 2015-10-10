@@ -13,6 +13,7 @@
             <label for="commentaires">Commentaire :</label>
             <textarea id="commentaires" placeholder="Rédiger votre commentaire" name="commentaire" rows="4"
                       class="form-control"></textarea>
+
             <div class="text-danger"><b><?php if (isset($erreurcommentaire)) echo $erreurcommentaire; ?></b></div>
         </div>
     </div>
