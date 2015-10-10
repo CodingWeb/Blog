@@ -30,7 +30,11 @@ include('theme/menu.php');
     <ol class="breadcrumb">
         <li class="active">Accueil</li>
         <li class="active"><a href="admin.php">Admin</a></li>
+        <span class="pull-right"><a href="../admin/deco.php">Déconnection</a></span>
     </ol>
+    <div class="jumbotron">
+        <h1 class="text-center">Administration du blog</h1>
+    </div>
     <?php
     /*
      * On regarde si on a un message et si c'est le cas
@@ -69,7 +73,7 @@ include('theme/menu.php');
                 postée
                 le <?php echo date('j/n/Y à G:i', strtotime($donnees->date)) ?></p>
             <p><a href="add_article.php">
-                    <button class="btn btn-info">Ajouter un article</button>
+                    <button class="btn btn-primary">Ajouter un article</button>
                 </a></p>
         </div>
 

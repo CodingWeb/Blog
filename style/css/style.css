@@ -34,3 +34,8 @@ button a {
 #commentaire a{
     color: #c90000;
 }
+.jumbotron h1 {
+    font-size: 40px;
+    margin: 0;
+    color: #953b39;
+}

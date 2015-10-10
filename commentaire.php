@@ -9,6 +9,7 @@ if (!empty($_GET))
     extract($_GET);
     $page = strip_tags($page);
 }
+
 $requete = $bdd->prepare('SELECT id FROM commentaires WHERE article_id = :article_id');
 $requete->execute(array('article_id' => $page));
 if ($requete->rowCount()==0)
