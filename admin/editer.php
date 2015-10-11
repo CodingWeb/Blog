@@ -117,7 +117,7 @@ include('theme/menu.php');
         </div>
     </form>
     <?php
-    $requetes = $bdd->prepare('SELECT * FROM commentaires WHERE article_id= :article_id');
+    $requetes = $bdd->prepare('SELECT * FROM commentaires WHERE article_id = :article_id ORDER BY id DESC');
     $requetes->execute(array('article_id' => $page));
     while ($donnees = $requetes->fetch()): ?>
         <div class="well">
