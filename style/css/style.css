@@ -42,3 +42,6 @@ button a {
     margin: 0;
     color: #953b39;
 }
+#bloc_contenu{
+    word-wrap: break-word;
+}

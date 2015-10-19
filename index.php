@@ -88,16 +88,20 @@ include('theme/menu.php');
             $requetes = $bdd->query('SELECT * FROM articles ORDER BY article_id DESC');
             while ($donnees = $requetes->fetch()): ?>
                 <div class="well">
+                   <div class="row">
+                       <div class="col-xs-12">
                     <a href="article.php?page=<?php echo $donnees->article_id; ?>">
                         <h2 class="text-center"><?php echo ucfirst(strip_tags($donnees->titre)); ?></h2>
                     </a>
 
-                    <p><?php echo nl2br(strip_tags($donnees->contenu)); ?></p>
+                    <p id="bloc_contenu"><?php echo  nl2br(strip_tags($donnees->contenu)); ?></p>
 
                     <p class="pull-right clearfix text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à
                         postée
                         le <?php echo date('j/n/Y à G:i', strtotime($donnees->date)) ?></p>
                     <a href="#commenter" class="btn btn-primary" role="button">Commenter</a>
+                </div>
+                </div>
                 </div>
             <?php endwhile;
             ?>

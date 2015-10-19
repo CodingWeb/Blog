@@ -61,7 +61,7 @@ include('theme/menu.php');
             $requete->execute(array('article_id' => $page));
             while ($donnees = $requete->fetch()): ?>
                 <div class="well">
-                    <p><?php echo nl2br(strip_tags($donnees->contenu)); ?></p>
+                    <p id="bloc_contenu"><?php echo nl2br(strip_tags($donnees->contenu)); ?></p>
 
                     <p class="pull-right clearfix text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à
                         postée

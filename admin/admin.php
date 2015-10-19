@@ -68,7 +68,7 @@ include('theme/menu.php');
             <p><a title="Suprimer l'article" href="suprimer.php?page=<?php echo $donnees->article_id; ?>"><span
                         class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></p>
             <h3 class="text-center"><?php echo strip_tags($donnees->titre); ?></h3>
-            <p><?php echo nl2br(strip_tags($donnees->contenu)); ?></p>
+            <p id="bloc_contenu"><?php echo nl2br(strip_tags($donnees->contenu)); ?></p>
             <p class="pull-right clearfix text-info"><?php echo ucfirst(strip_tags($donnees->pseudo)); ?> à
                 postée
                 le <?php echo date('j/n/Y à G:i', strtotime($donnees->date)) ?></p>

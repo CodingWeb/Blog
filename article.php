@@ -99,7 +99,7 @@ include('theme/menu.php');
                     <a href="#">
                         <h2 class="text-center"><?php echo ucfirst(strip_tags($donnes->titre)); ?></h2>
                     </a>
-                    <p><?php echo nl2br(strip_tags($donnes->contenu)); ?></p>
+                    <p id="bloc_contenu"><?php echo nl2br(strip_tags($donnes->contenu)); ?></p>
                     <p class="pull-right clearfix text-info"><?php echo ucfirst(strip_tags($donnes->pseudo)); ?> à
                         postée
                         le <?php echo date('j/n/Y à G:i', strtotime($donnes->date)) ?></p>
